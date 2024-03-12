@@ -1,9 +1,22 @@
 const form = document.getElementById("formInput");
-
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
+  // Check if the input fields are not empty
   const formData = new FormData(form);
+  let isFormValid = true;
+
+  formData.forEach((value) => {
+    if (value.trim() === "") {
+      isFormValid = false;
+    }
+  });
+
+  if (!isFormValid) {
+    alert("Please fill out all fields before submitting.");
+    return;
+  }
+
   const userData = {};
   formData.forEach((value, key) => {
     userData[key] = value;
@@ -12,8 +25,10 @@ form.addEventListener("submit", function (event) {
   let formArray = JSON.parse(localStorage.getItem("formData")) || [];
   formArray.push(userData);
   localStorage.setItem("formData", JSON.stringify(formArray));
-});
 
+  // Optionally, you can reset the form fields after successful submission
+  form.reset();
+});
 // const formArray = JSON.parse(localStorage.getItem('formData')) || [];
 
 // formArray.forEach((formData, index) => {
