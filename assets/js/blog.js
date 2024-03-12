@@ -1,5 +1,6 @@
 const root = document.documentElement;
 const changeColorsButton = document.getElementById("colorMode");
+const backButton = document.getElementsById("backButton");
 let isColorModeToggled = false;
 
 changeColorsButton.addEventListener("click", function () {
@@ -17,4 +18,8 @@ changeColorsButton.addEventListener("click", function () {
 
   // Toggle the state
   isColorModeToggled = !isColorModeToggled;
+});
+
+landingPageButton.addEventListener("click", () => {
+  window.location.href = "https://www.example.com/thank-you";
 });

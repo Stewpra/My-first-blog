@@ -2,7 +2,6 @@ const form = document.getElementById("formInput");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Check if the input fields are not empty
   const formData = new FormData(form);
   let isFormValid = true;
 
@@ -26,8 +25,7 @@ form.addEventListener("submit", function (event) {
   formArray.push(userData);
   localStorage.setItem("formData", JSON.stringify(formArray));
 
-  // Optionally, you can reset the form fields after successful submission
-  form.reset();
+  window.location.href = "https://www.example.com/thank-you";
 });
 // const formArray = JSON.parse(localStorage.getItem('formData')) || [];
 
