@@ -46,9 +46,8 @@ section {
   flex-direction: column;
   width: 100%;
   margin: 10px;
-  border: var(--tertiary) 2px solid;
   border-radius: 8px;
-  box-shadow: 4px 2px var(--secondary);
+  box-shadow: 4px 5px var(--secondary);
 }
 
 footer {
@@ -57,9 +56,8 @@ footer {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   color: var(--tertiary);
   border-color: var(--tertiary);
-}
-
-.colorMode {
 }
