@@ -47,12 +47,15 @@ section {
   width: 100%;
   margin: 10px;
   border-radius: 8px;
-  box-shadow: 4px 5px var(--secondary);
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top: 4px solid var(--tertiary);
   margin-top: 3px;
+  color: var(--tertiary);
 }
 
 .card {
@@ -60,4 +63,5 @@ footer {
   flex-direction: column;
   color: var(--tertiary);
   border-color: var(--tertiary);
+  box-shadow: 4px 2px var(--secondary);
 }
