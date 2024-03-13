@@ -1,6 +1,6 @@
 const root = document.documentElement;
 const changeColorsButton = document.getElementById("colorMode");
-const backButton = document.getElementsById("backButton");
+const backButton = document.getElementById("backButton");
 let isColorModeToggled = false;
 
 changeColorsButton.addEventListener("click", function () {
@@ -20,6 +20,45 @@ changeColorsButton.addEventListener("click", function () {
   isColorModeToggled = !isColorModeToggled;
 });
 
-landingPageButton.addEventListener("click", () => {
+backButton.addEventListener("click", () => {
   window.location.href = "https://www.example.com/thank-you";
+});
+
+// Retrieve the array from localStorage
+const formArray = JSON.parse(localStorage.getItem("formData")) || [];
+
+// Get container for posts
+const blogContainer = document.getElementById("blog-posts-container");
+
+// Iterate over the formData and create blog post elements
+formArray.forEach((formData) => {
+  // Create a card element for the blog post
+  const card = document.createElement("div");
+  card.classList.add("card");
+  card.classList.add("card");
+  card.style.border = "3px solid ";
+  card.style.margin = "3px";
+  card.style.borderRadius = "8px";
+  card.style.padding = "5px";
+  card.style.width = "100%";
+
+  // Create elements for the blog post
+  const postTitle = document.createElement("h3");
+  postTitle.textContent = `Title: ${formData.blogtitle}`;
+
+  console.log(formData);
+
+  const postContent = document.createElement("p");
+  postContent.textContent = `Content: ${formData.blogcontent}`;
+
+  const postAuthor = document.createElement("p");
+  postAuthor.textContent = `Username: ${formData.userName}`;
+
+  // Append elements to the card
+  card.appendChild(postTitle);
+  card.appendChild(postContent);
+  card.appendChild(postAuthor);
+
+  // Append the card to the main blog container
+  blogContainer.appendChild(card);
 });

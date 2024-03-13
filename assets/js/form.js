@@ -27,12 +27,6 @@ form.addEventListener("submit", function (event) {
 
   window.location.href = "https://www.example.com/thank-you";
 });
-// const formArray = JSON.parse(localStorage.getItem('formData')) || [];
-
-// formArray.forEach((formData, index) => {
-//     // Access each form data object in the array
-//     console.log(`Form submission ${index + 1}:`, formData);
-// });
 
 const root = document.documentElement;
 const changeColorsButton = document.getElementById("colorMode");
