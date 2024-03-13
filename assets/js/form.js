@@ -25,7 +25,7 @@ form.addEventListener("submit", function (event) {
   formArray.push(userData);
   localStorage.setItem("formData", JSON.stringify(formArray));
 
-  window.location.href = "https://www.example.com/thank-you";
+  window.location.href = "./blog.html";
 });
 
 const root = document.documentElement;

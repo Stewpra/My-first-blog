@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* border: 1px red solid; */
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
   background-color: var(--primary);
@@ -62,7 +61,10 @@ button {
 }
 
 h1 {
-  align-self: center;
+  margin: 0;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 label {
@@ -79,4 +81,14 @@ button {
   background-color: var(--tertiary);
   color: var(--primary);
   border-radius: 8px;
+}
+
+.title {
+  width: 490px;
+  height: 490px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, lightblue, lightgreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

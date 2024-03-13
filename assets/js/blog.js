@@ -21,7 +21,7 @@ changeColorsButton.addEventListener("click", function () {
 });
 
 backButton.addEventListener("click", () => {
-  window.location.href = "https://www.example.com/thank-you";
+  window.location.href = "./index.html";
 });
 
 // Retrieve the array from localStorage
@@ -44,7 +44,7 @@ formArray.forEach((formData) => {
 
   // Create elements for the blog post
   const postTitle = document.createElement("h3");
-  postTitle.textContent = `Title: ${formData.blogtitle}`;
+  postTitle.textContent = `Title: ${formData.blogTitle}`;
 
   console.log(formData);
 
